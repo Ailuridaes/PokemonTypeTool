@@ -31,14 +31,22 @@ export const updateTypes = (types) => (
         matchups.half = type1.resistances;
         matchups.zero = type1.immunities;
       } else {
-        let type2 = MATCHUPS[types[1]];
+        // Copy arrays to type2 to allow removing duplicate types
+        let type2 = {
+          weaknesses: MATCHUPS[types[1]].weaknesses.slice(),
+          resistances: MATCHUPS[types[1]].resistances.slice(),
+          immunities: MATCHUPS[types[1]].immunities.slice()
+        };
         for(let w of type1.weaknesses) {
           if(type2.weaknesses.includes(w)) {
             matchups.quadruple.push(w);
+            type2.weaknesses.splice(type2.weaknesses.indexOf(w), 1);
           } else if(type2.resistances.includes(w)) {
             // x1 damage, don't include in matchups
+            type2.resistances.splice(type2.resistances.indexOf(w), 1);
           } else if(type2.immunities.includes(w)) {
             matchups.zero.push(w);
+            type2.immunities.splice(type2.immunities.indexOf(w), 1);
           } else {
             matchups.double.push(w);
           }
@@ -46,10 +54,13 @@ export const updateTypes = (types) => (
         for(let r of type1.resistances) {
           if(type2.weaknesses.includes(r)) {
             // x1 damage, don't include in matchups
+            type2.weaknesses.splice(type2.weaknesses.indexOf(r), 1);
           } else if(type2.resistances.includes(r)) {
             matchups.quarter.push(r);
+            type2.resistances.splice(type2.resistances.indexOf(r), 1);
           } else if(type2.immunities.includes(r)) {
             matchups.zero.push(r);
+            type2.immunities.splice(type2.immunities.indexOf(r), 1);
           } else {
             matchups.half.push(r);
           }
@@ -59,6 +70,11 @@ export const updateTypes = (types) => (
             matchups.zero.push(i);
           }
         }
+
+        // Add remaining matchups from type2
+        matchups.double = matchups.double.concat(type2.weaknesses);
+        matchups.half = matchups.half.concat(type2.resistances);
+        matchups.zero = matchups.zero.concat(type2.immunities);
       }
       dispatch(setMatchups(matchups));
       console.log(matchups);
