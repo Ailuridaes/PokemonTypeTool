@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import typeChart from './typeChart';
+import types from './types';
+import matchups from './matchups';
 
 const typeToolApp = combineReducers({
-  typeChart
+  types,
+  matchups
 });
 
 export default typeToolApp;
