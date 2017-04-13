@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setTypes } from '../actions';
+import { updateTypes } from '../actions';
 import TypeForm from '../components/TypeForm';
 
 const mapStateToProps = (state) => {
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: (types) => {
-      dispatch(setTypes(types));
+      dispatch(updateTypes(types));
     }
   }
 };

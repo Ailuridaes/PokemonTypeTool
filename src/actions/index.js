@@ -61,5 +61,11 @@ export const updateTypes = (types) => (
         }
       }
       dispatch(setMatchups(matchups));
+      console.log(matchups);
+      console.log(matchups.quadruple);
+      console.log(matchups.double);
+      console.log(matchups.half);
+      console.log(matchups.quarter);
+      console.log(matchups.zero);
   }
 );
