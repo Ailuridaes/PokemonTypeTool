@@ -45,52 +45,49 @@ export const MATCHUPS = {
         resistances: ['POISON', 'ROCK'],
         immunities: ['ELECTRIC']
     },
-    // TODO: Finish definining types!
-    /*
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
+    FLYING: {
+        weaknesses: ['ELECTRIC', 'ICE', 'ROCK'],
+        resistances: ['GRASS', 'FIGHTING', 'BUG'],
+        immunities: ['GROUND']
+    },
+    PSYCHIC: {
+        weaknesses: ['BUG', 'GHOST', 'DARK'],
+        resistances: ['FIGHTING', 'PSYCHIC'],
         immunities: []
     },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
+    BUG: {
+        weaknesses: ['FIRE', 'FLYING', 'ROCK'],
+        resistances: ['GRASS', 'FIGHTING', 'GROUND'],
         immunities: []
     },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
+    ROCK: {
+        weaknesses: ['WATER', 'GRASS', 'FIGHTING', 'GROUND', 'STEEL'],
+        resistances: ['NORMAL', 'FIRE', 'POISON', 'FLYING'],
         immunities: []
     },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
+    GHOST: {
+        weaknesses: ['GHOST', 'DARK'],
+        resistances: ['POISON', 'BUG'],
+        immunities: ['NORMAL', 'FIGHTING']
+    },
+    DRAGON: {
+        weaknesses: ['ICE', 'DRAGON', 'FAIRY'],
+        resistances: ['FIRE', 'WATER', 'ELECTRIC', 'GRASS'],
         immunities: []
     },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
-        immunities: []
+    DARK: {
+        weaknesses: ['FIGHTING', 'BUG', 'FAIRY'],
+        resistances: ['GHOST', 'DARK'],
+        immunities: ['PSYCHIC']
     },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
-        immunities: []
+    STEEL: {
+        weaknesses: ['FIRE', 'FIGHTING', 'GROUND'],
+        resistances: ['BUG', 'DRAGON', 'FAIRY', 'FLYING', 'GRASS', 'ICE', 'NORMAL', 'PSYCHIC', 'ROCK', 'STEEL'],
+        immunities: ['POISON']
     },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
-        immunities: []
-    },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
-        immunities: []
-    },
-    NORMAL: {
-        weaknesses: ['FIGHTING'],
-        resistances: [],
-        immunities: []
+    FAIRY: {
+        weaknesses: ['POISON', 'STEEL'],
+        resistances: ['FIGHTING', 'BUG', 'DARK'],
+        immunities: ['DRAGON']
     }
-    */
 }
