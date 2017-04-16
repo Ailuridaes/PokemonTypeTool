@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import SetTypes from '../containers/SetTypes';
+import MatchupTypeChart from '../containers/MatchupTypeChart';
 
 class App extends React.Component {
   render() {
@@ -8,9 +8,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>React Type Tool</h1>
+          <h1>Pokemon Type Tool</h1>
         </div>
         <SetTypes />
+        <MatchupTypeChart />
       </div>
     );
   }

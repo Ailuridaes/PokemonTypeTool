@@ -4,7 +4,8 @@ const matchups = (state = {
     quadruple: [],
     double: [],
     half: [],
-    zero: [],
+    quarter: [],
+    zero: []
 }, action) => {
   switch (action.type) {
     case SET_MATCHUPS:
