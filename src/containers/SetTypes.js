@@ -3,7 +3,10 @@ import { updateTypes } from '../actions';
 import TypeForm from '../components/TypeForm';
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    type1: state.types[0],
+    type2: state.types[1]
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
