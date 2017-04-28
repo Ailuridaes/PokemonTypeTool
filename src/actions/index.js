@@ -66,8 +66,12 @@ export const updateTypes = (types) => (
         }
       }
       for(let i of type1.immunities) {
-        if(!type2.immunities.includes(i)) {
-          matchups.zero.push(i);
+        matchups.zero.push(i);
+        for(let prop in type2) {
+          if(type2[prop].includes(i)) {
+            type2[prop].splice(prop.indexOf(i), 1);
+            break;
+          }
         }
       }
 
