@@ -7,6 +7,6 @@ const types = (state = ['NONE', 'NONE'], action) => {
     default:
       return state;
   }
-}
+};
 
 export default types;

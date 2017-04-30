@@ -1,11 +1,11 @@
 import { SET_MATCHUPS } from '../actions/actionTypes';
 
 const matchups = (state = {
-    quadruple: [],
-    double: [],
-    half: [],
-    quarter: [],
-    zero: []
+  quadruple: [],
+  double: [],
+  half: [],
+  quarter: [],
+  zero: []
 }, action) => {
   switch (action.type) {
     case SET_MATCHUPS:
@@ -13,6 +13,6 @@ const matchups = (state = {
     default:
       return state;
   }
-}
+};
 
 export default matchups;
