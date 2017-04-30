@@ -91,3 +91,4 @@ export const MATCHUPS = {
         immunities: ['DRAGON']
     }
 }
+export const RESOURCE_URL = 'https://s3-us-west-1.amazonaws.com/pokemon-type-tool/pokemonTypeList.json';
