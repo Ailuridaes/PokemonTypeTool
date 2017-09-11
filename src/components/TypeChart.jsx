@@ -11,10 +11,10 @@ const TypeChart = (props) => {
   ];
 
   return (
-    <div>
+    <div style={styles.damageContainer}>
       {layout.map(d => {
         return (
-          <div key={d.damage}>
+          <div key={d.damage} style={styles.damageDiv}>
             <h3>{d.display}</h3>
             {props.matchups[d.damage].map(type =>
               <MatchupType key={type} type={type} />
@@ -24,6 +24,22 @@ const TypeChart = (props) => {
       })}
     </div>
   );
+};
+
+const styles = {
+  damageDiv: {
+    background: "#CCC",
+    borderRadius: "6px",
+    margin: "6px",
+    padding: "12px",
+    // one-third - margin * 6/3 - padding * 2
+    width: "calc(33.33% - 12px - 24px)"
+  },
+  damageContainer: {
+    display: "flex",
+    flexFlow: "row wrap",
+    justifyContent: "center"
+  }
 };
 
 export default TypeChart;
