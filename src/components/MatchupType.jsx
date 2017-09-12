@@ -1,15 +1,15 @@
 import React from 'react';
 
 const divStyleBase = {
-  display: "inline-block",
-  width: "58px",
+  width: "100%",
   lineHeight: "1",
   margin: "2px",
   padding: "5px 0",
   border: "1px solid #aaa",
-  borderRadius: "2px",
+  borderRadius: "6px",
   color: "#fff",
-  fontSize: "10px",
+  font: "1.2em arial, sans-serif",
+  fontWeight: "bold",
   textAlign: "center",
   textShadow: "1px 1px 1px #333",
   textTransform: "uppercase"
