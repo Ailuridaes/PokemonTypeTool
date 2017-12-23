@@ -1,5 +1,9 @@
 import React from 'react';
 
+const styleBase = {
+  borderRadius: "6px"
+};
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -20,8 +24,8 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        <input placeholder="Search for a Pokemon...." onChange={this.handleChange} />
-        <button onClick={this.onSubmit}>Submit</button>
+        <input placeholder="Search for a Pokemon...." onChange={this.handleChange} style={styleBase} />
+        <button onClick={this.onSubmit} style={styleBase}>Submit</button>
       </div>
     );
   }
