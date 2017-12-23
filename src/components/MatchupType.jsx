@@ -1,9 +1,9 @@
 import React from 'react';
 
 const divStyleBase = {
-  width: "100%",
+  width: "calc(100% - 2px)",
+  minWidth: "110px",
   lineHeight: "1",
-  margin: "2px",
   padding: "5px 0",
   border: "1px solid #aaa",
   borderRadius: "6px",

@@ -20,11 +20,15 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        <input placeholder="Search for a Pokemon...." onChange={this.handleChange} />
-        <button onClick={this.onSubmit}>Submit</button>
+        <input placeholder="Search for a Pokemon...." onChange={this.handleChange} style={styleBase} />
+        <button onClick={this.onSubmit} style={styleBase}>Submit</button>
       </div>
     );
   }
 }
+
+const styleBase = {
+  borderRadius: "6px"
+};
 
 export default Search;
