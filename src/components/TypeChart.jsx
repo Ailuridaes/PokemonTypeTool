@@ -9,11 +9,32 @@ const TypeChart = (props) => {
     { damage: "quarter", display: "1/4x" },
     { damage: "zero", display: "0x" }
   ];
+  
+  const styles = {
+    damageDiv: {
+      alignItems: "center",
+      background: "#CCC",
+      borderRadius: "6px",
+      display: "flex",
+      flexFlow: "row wrap",
+      margin: "6px",
+      padding: "12px",
+      // one-third - margin * 6/3 - padding * 2
+      width: "calc(33.33% - 12px - 24px)",
+      minWidth: "120px"
+    },
+    damageContainer: {
+      display: "flex",
+      flexFlow: "row wrap",
+      justifyContent: "center",
+      marginTop: "20px"
+    }
+  };
 
   return (
     <div style={styles.damageContainer}>
       {layout.map(d => {
-        return (
+        return props.matchups[d.damage].length > 0 && (
           <div key={d.damage} style={styles.damageDiv}>
             <h3 style={{ flex: "-1 30px", padding: "0 18px 0 6px" }}>{d.display}</h3>
             <div style={{flex: "3 60px"}}>
@@ -26,25 +47,6 @@ const TypeChart = (props) => {
       })}
     </div>
   );
-};
-
-const styles = {
-  damageDiv: {
-    alignItems: "center",
-    background: "#CCC",
-    borderRadius: "6px",
-    display: "flex",
-    flexFlow: "row wrap",
-    margin: "6px",
-    padding: "12px",
-    // one-third - margin * 6/3 - padding * 2
-    width: "calc(33.33% - 12px - 24px)"
-  },
-  damageContainer: {
-    display: "flex",
-    flexFlow: "row wrap",
-    justifyContent: "center"
-  }
 };
 
 export default TypeChart;
